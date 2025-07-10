@@ -1,0 +1,99 @@
+
+*{
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background-color: RGB(222, 184, 135);
+}
+
+.lavishly-yours-regular {
+  padding-left: 2rem;
+  font-family: "Lavishly Yours", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 5rem;
+}
+
+nav{
+  height:7rem;
+  background-color: rgb(85,107,47);
+  margin-top: 0;
+  box-shadow: 0 7px 2px -2px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width:100%;
+}
+
+nav ul{
+  height:100%;
+  flex-grow: 1;
+  list-style: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.links-in-header{
+
+  height: 100%;
+  
+}
+
+nav li:hover{
+  background-color: #f0f0f0;
+}
+
+nav a{
+  height: 100%;
+  color: black;
+  text-decoration: none;
+  padding: 0 30px;
+  display: flex;
+  align-items: center;
+  font-size: 2.5rem;
+}
+
+nav a:hover{
+  background-color: #f0f0f0;
+}
+
+#about-us-container{
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  background: RGB(222, 184, 135);
+  
+}
+
+.about-us-picture{
+  padding-top: 2rem;
+  height: 15rem;
+  width: 30rem;
+  border-collapse: separate;
+ 
+  overflow:hidden;
+}
+
+.about-us-picture img{
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+   border-radius: 5%;
+}
+
+.tea-house-header{
+  text-decoration: underline;
+}
+
+.about-us-description{
+  padding-top: 3rem;
+  width: 25rem;
+  height: 15rem;
+  font-size: 1.5rem;
+  
+}
