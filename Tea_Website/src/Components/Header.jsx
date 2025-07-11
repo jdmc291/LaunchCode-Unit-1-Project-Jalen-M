@@ -2,15 +2,17 @@
 import Teacup from "../assets/TeaIcon.jpg"
 import Logo from "../assets/Icon.svg"
 import { HeaderData } from "../HeaderData"
+import { Link } from "react-router-dom"
 
 const Header = (props) => {
 
     let headerItems = HeaderData.map((singleLink) => {
+        console.log(singleLink.Link)
         return (
-            <li className="links-in-header">
-                <a href="#">
+            <li key={singleLink.Id} className="links-in-header">
+                <Link to={`${singleLink.Link}`}>
                     {singleLink.Title}
-                </a>
+                </Link>
             </li>
         )
     })

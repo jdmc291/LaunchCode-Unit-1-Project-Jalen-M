@@ -4,6 +4,10 @@
   padding: 0;
 }
 
+#root{
+  height: 100%
+}
+
 body{
   background-color: RGB(222, 184, 135);
 }
@@ -25,6 +29,7 @@ nav{
   justify-content: flex-end;
   align-items: center;
   width:100%;
+  margin-bottom: 1rem;
 }
 
 nav ul{
@@ -87,7 +92,11 @@ nav a:hover{
 }
 
 .tea-house-header{
-  text-decoration: underline;
+  text-decoration: none;
+  border: 2px solid black;
+  width: fit-content;
+  padding: .5rem;
+  border-radius: 3rem;
 }
 
 .about-us-description{
@@ -96,4 +105,63 @@ nav a:hover{
   height: 15rem;
   font-size: 1.5rem;
   
+}
+
+
+#shopping-section{
+  display: grid;
+  width: 100%;
+  height: calc(100vh - 8rem);
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+  grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+
+}
+
+#filter-box{
+  background-color: aqua;
+  grid-row: 1 / 7;
+  grid-column: 1 / 2;
+}
+
+#catalog-of-items{
+  grid-row: 1 / 7;
+  grid-column: 2 /6 ;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  overflow-y: auto;
+}
+
+#shopping-cart{
+  grid-row: 1 /2 ;
+  grid-column: 6/7;
+  background-color: beige;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#shopping-cart:hover{
+  cursor: pointer;
+}
+
+#footer-section{
+  grid-column: 6 / 7;
+  grid-row: 2 / 7;
+  background-color: blueviolet;
+}
+
+#shopping-items{
+
+}
+
+.product-card{
+  margin: 1rem;
+  background-color: rgb(191, 168, 67);
+  max-width: 25%;
+  height: 30%;
+  width: 25%;
+  
+  border-radius: 1rem;
 }
