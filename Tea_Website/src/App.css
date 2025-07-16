@@ -133,7 +133,7 @@ nav a:hover{
   overflow-y: auto;
 }
 
-#shopping-cart{
+#shopping-cart-area{
   grid-row: 1 /2 ;
   grid-column: 6/7;
   background-color: beige;
@@ -141,27 +141,150 @@ nav a:hover{
   display: flex;
   justify-content: center;
   align-items: center;
+  border-radius: 50%;
 }
-#shopping-cart:hover{
+
+#shopping-cart-area:hover{
   cursor: pointer;
+}
+
+#total-items-in-cart{
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 100;
+  font-size: 2rem;
 }
 
 #footer-section{
   grid-column: 6 / 7;
   grid-row: 2 / 7;
-  background-color: blueviolet;
+  background-color: rgb(226, 209, 243);
 }
 
 #shopping-items{
 
 }
-
+/*--------------Product Card CSS--------------*/
 .product-card{
   margin: 1rem;
   background-color: rgb(191, 168, 67);
   max-width: 25%;
-  height: 30%;
+  height: 18%;
   width: 25%;
-  
   border-radius: 1rem;
+  transition: all .6s ease;
+}
+
+.product-card:has(.product-card-description:hover){
+  height: 30%;
+}
+
+.product-card:hover{
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.15) 4px 4px 4px;
+
+}
+
+.product-card-picture-area{
+  height: 7rem;
+  width: 100%;
+  background-color: #f0f0f0;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+.source-picture{
+  height: 100%;
+  width: 100%;
+  object-fit:contain;
+}
+
+.product-card-description{
+ display: flex;
+ justify-content: center;
+ align-items: center;
+ width: 100%;
+ height: 50%;
+ position: relative;
+
+}
+
+.product-card-description:hover .more-tea-info{
+  opacity: 100%;
+}
+
+.name-of-tea{
+  position: absolute;
+  top: 0.5rem;
+  text-align: center;
+  font-size: 1.2rem;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: 100;
+}
+
+.name-of-tea:hover + .more-tea-info{
+  opacity: 100%;
+}
+.more-tea-info{
+
+ position: absolute;
+ top: 2.5rem;
+ text-align: center;
+ opacity: 0%;
+ transition: .3s;
+ font-family: 'Arial Narrow', Arial, sans-serif;
+ font-weight: 50;
+
+}
+
+
+
+/*--------------End Of Product Card CSS--------------*/
+
+/*--------------Popup Box--------------*/
+
+.popup{
+  grid-column: 1 / 7;
+  grid-row: 1 / 7;
+  background-color: rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-card{
+  position: relative;
+  background-color: #f0f0f0;
+  height: 40%;
+  width: 25%;
+  padding: 4rem;
+}
+
+.teahouse-close-button{
+  position: absolute;
+  top:1rem;
+  right:1rem;
+  padding: .45rem;
+  background-color: firebrick;
+  color: white;
+  border-radius: .5rem;;
+}
+
+.popup-content{
+
+  top: 3rem;
+  text-align: center;
+  width: 100%;
+}
+
+.popup-table{
+  width: 100%;
+}
+
+/*--------------Tea House Button */
+.tea-house-button{
+  height: 1rem;
+  width: 2rem;
+  color: white;
+  background-color: firebrick;
+  border: .5rem;
 }
