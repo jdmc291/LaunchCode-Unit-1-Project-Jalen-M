@@ -548,3 +548,24 @@ footer p {
 #successful-form-sent {
   color: green;
 }
+
+/*--------------End of Register Form--------------*/
+
+/*--------------Start of Locations Page--------------*/
+
+#locations-section{
+  height: calc(100vh - 7rem);
+  width: 100%;
+
+}
+
+.not-available{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+/*--------------End of Locations Page--------------*/

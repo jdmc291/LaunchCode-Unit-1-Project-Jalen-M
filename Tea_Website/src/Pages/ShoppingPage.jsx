@@ -59,7 +59,6 @@ const ShoppingPage = () => {
 
                 <PopupCard popupStatus={popup} changeStatus={setPopup} numberOfItems={count} setNumberOfItems={setCount} usersCurrentItems={usersCurrentItems} setUsersCurrentItems={setUsersCurrentItems}/>
 
-
             </section>
 
         )
