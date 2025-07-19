@@ -1,14 +1,13 @@
-
-*{
+* {
   margin: 0;
   padding: 0;
 }
 
-#root{
+#root {
   height: 100%
 }
 
-body{
+body {
   background-color: RGB(222, 184, 135);
 }
 
@@ -20,20 +19,43 @@ body{
   font-size: 5rem;
 }
 
-nav{
-  height:7rem;
-  background-color: rgb(85,107,47);
+@media (max-width: 883px) {
+  .lavishly-yours-regular {
+    padding-left: 2rem;
+    font-family: "Lavishly Yours", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .lavishly-yours-regular {
+    padding-left: 2rem;
+    font-family: "Lavishly Yours", cursive;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
+    text-align: center;
+  }
+}
+
+nav {
+  height: 7rem;
+  background-color: rgb(85, 107, 47);
   margin-top: 0;
   box-shadow: 0 7px 2px -2px rgba(0, 0, 0, 0.2);
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  width:100%;
-  margin-bottom: 1rem;
+  width: 100%;
+  z-index: 999;
+  position: relative;
+
 }
 
-nav ul{
-  height:100%;
+nav ul {
+  height: 100%;
   flex-grow: 1;
   list-style: none;
   display: flex;
@@ -41,17 +63,17 @@ nav ul{
   align-items: center;
 }
 
-.links-in-header{
+.links-in-header {
 
   height: 100%;
-  
+
 }
 
-nav li:hover{
+nav li:hover {
   background-color: #f0f0f0;
 }
 
-nav a{
+nav a {
   height: 100%;
   color: black;
   text-decoration: none;
@@ -61,37 +83,57 @@ nav a{
   font-size: 2.5rem;
 }
 
-nav a:hover{
+@media (max-width: 1160px) {
+  nav a {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 962px) {
+  nav a {
+    font-size: 1.1rem;
+  }
+}
+
+
+nav a:hover {
   background-color: #f0f0f0;
 }
 
-#about-us-container{
+#home-section {
+  height: auto;
   width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: space-evenly;
   background: RGB(222, 184, 135);
-  
+  display: flex;
+  flex-direction: column;
+
 }
 
-.about-us-picture{
+#about-tea-house-area {
+  width: 100%;
+  display: flex;
+  height: 50vh;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.about-us-picture {
   padding-top: 2rem;
   height: 15rem;
   width: 30rem;
   border-collapse: separate;
- 
-  overflow:hidden;
+  display: inline-block;
+  overflow: hidden;
 }
 
-.about-us-picture img{
+.about-us-picture img {
   height: 100%;
   width: 100%;
   object-fit: cover;
-   border-radius: 5%;
+  border-radius: 5%;
 }
 
-.tea-house-header{
+.tea-house-header {
   text-decoration: none;
   border: 2px solid black;
   width: fit-content;
@@ -99,33 +141,38 @@ nav a:hover{
   border-radius: 3rem;
 }
 
-.about-us-description{
-  padding-top: 3rem;
-  width: 25rem;
-  height: 15rem;
+.about-us-description {
+  display: flex;
+  width: 40rem;
+  height: 25rem;
+  margin-top: 3rem;
   font-size: 1.5rem;
-  
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(to bottom, rgba(85, 107, 47, 75) 45%, rgba(92, 169, 4, 0)), url("./assets/GreenLeaves.jpg");
+
 }
 
 
-#shopping-section{
+#shopping-section {
   display: grid;
   width: 100%;
-  height: calc(100vh - 8rem);
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr ;
+  height: calc(100vh - 7rem);
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 
 }
 
-#filter-box{
-  background-color: aqua;
+#filter-box {
+  background-color: rgb(77, 85, 85);
   grid-row: 1 / 7;
   grid-column: 1 / 2;
 }
 
-#catalog-of-items{
+#catalog-of-items {
   grid-row: 1 / 7;
-  grid-column: 2 /6 ;
+  grid-column: 2 /6;
   display: flex;
   justify-content: space-evenly;
   align-items: flex-start;
@@ -133,38 +180,30 @@ nav a:hover{
   overflow-y: auto;
 }
 
-#shopping-cart-area{
-  grid-row: 1 /2 ;
+#shopping-cart-area {
+  grid-row: 1 /2;
   grid-column: 6/7;
   background-color: beige;
-
+  margin: 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
+  margin-bottom: .3rem;
 }
 
-#shopping-cart-area:hover{
+#shopping-cart-area:hover {
   cursor: pointer;
 }
 
-#total-items-in-cart{
+#total-items-in-cart {
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-weight: 100;
   font-size: 2rem;
 }
 
-#footer-section{
-  grid-column: 6 / 7;
-  grid-row: 2 / 7;
-  background-color: rgb(226, 209, 243);
-}
-
-#shopping-items{
-
-}
 /*--------------Product Card CSS--------------*/
-.product-card{
+.product-card {
   margin: 1rem;
   background-color: rgb(191, 168, 67);
   max-width: 25%;
@@ -174,17 +213,17 @@ nav a:hover{
   transition: all .6s ease;
 }
 
-.product-card:has(.product-card-description:hover){
+.product-card:has(.product-card-description:hover) {
   height: 30%;
 }
 
-.product-card:hover{
+.product-card:hover {
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.15) 4px 4px 4px;
 
 }
 
-.product-card-picture-area{
+.product-card-picture-area {
   height: 7rem;
   width: 100%;
   background-color: #f0f0f0;
@@ -192,27 +231,27 @@ nav a:hover{
   border-top-right-radius: 1rem;
 }
 
-.source-picture{
+.source-picture {
   height: 100%;
   width: 100%;
-  object-fit:contain;
+  object-fit: contain;
 }
 
-.product-card-description{
- display: flex;
- justify-content: center;
- align-items: center;
- width: 100%;
- height: 50%;
- position: relative;
+.product-card-description {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 50%;
+  position: relative;
 
 }
 
-.product-card-description:hover .more-tea-info{
+.product-card-description:hover .more-tea-info {
   opacity: 100%;
 }
 
-.name-of-tea{
+.name-of-tea {
   position: absolute;
   top: 0.5rem;
   text-align: center;
@@ -221,18 +260,15 @@ nav a:hover{
   font-weight: 100;
 }
 
-.name-of-tea:hover + .more-tea-info{
-  opacity: 100%;
-}
-.more-tea-info{
+.more-tea-info {
 
- position: absolute;
- top: 2.5rem;
- text-align: center;
- opacity: 0%;
- transition: .3s;
- font-family: 'Arial Narrow', Arial, sans-serif;
- font-weight: 50;
+  position: absolute;
+  top: 2.5rem;
+  text-align: center;
+  opacity: 0%;
+  transition: .3s;
+  font-family: 'Arial Narrow', Arial, sans-serif;
+  font-weight: 50;
 
 }
 
@@ -242,7 +278,7 @@ nav a:hover{
 
 /*--------------Popup Box--------------*/
 
-.popup{
+.popup {
   grid-column: 1 / 7;
   grid-row: 1 / 7;
   background-color: rgba(0, 0, 0, 0.25);
@@ -251,7 +287,7 @@ nav a:hover{
   align-items: center;
 }
 
-.popup-card{
+.popup-card {
   position: relative;
   background-color: #f0f0f0;
   height: 40%;
@@ -259,32 +295,256 @@ nav a:hover{
   padding: 4rem;
 }
 
-.teahouse-close-button{
-  position: absolute;
-  top:1rem;
-  right:1rem;
-  padding: .45rem;
-  background-color: firebrick;
-  color: white;
-  border-radius: .5rem;;
-}
 
-.popup-content{
+.popup-content {
 
   top: 3rem;
   text-align: center;
   width: 100%;
 }
 
-.popup-table{
+.popup-table {
   width: 100%;
 }
 
-/*--------------Tea House Button */
-.tea-house-button{
+/*--------------Tea House Button--------------*/
+.tea-house-button {
   height: 1rem;
   width: 2rem;
   color: white;
   background-color: firebrick;
   border: .5rem;
+}
+
+
+
+/*--------------Footer Section--------------*/
+#footer-section {
+  grid-column: 6 / 7;
+  grid-row: 2 / 7;
+
+}
+
+footer {
+  border-top: 1px solid black
+}
+
+footer p {
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.footer-items {
+  list-style: none;
+  padding: .62rem;
+  flex-wrap: wrap;
+}
+
+#footer-links-section {
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+/*--------------End Of Footer Section--------------*/
+
+/*--------------About Us Section--------------*/
+#about-us-section {
+  height: calc(100vh - 7rem);
+  width: 100%;
+  background-image: url("./assets/GreenTeaWallpaper.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+
+}
+
+#about-us-text {
+  text-align: center;
+  color: white;
+  font-size: 2rem;
+
+
+}
+
+#short-announcement {
+  text-align: center;
+  color: white;
+  font-weight: 900;
+  width: 75%;
+  font-size: 1.85rem;
+}
+
+.premium-style {
+
+  color: gold;
+  font-weight: 900;
+
+}
+
+#about-us-text-area {
+  height: calc(75vh - 8rem);
+  width: 35%;
+  margin-left: auto;
+  padding-top: 2rem;
+  padding-right: 2rem;
+}
+
+#become-a-member-area {
+  margin-top: 2rem;
+  height: 12rem;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+}
+
+#become-member-box {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image:
+    url("./assets/PeopleDrinkingTea 1.jpeg"),
+    url("./assets/PeopleDrinkingTea 2.jpeg"),
+    url("./assets/PeopleDrinkingTea 3.jpeg"),
+    url("./assets/PeopleDrinkingTea 4.jpeg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: 0%, 18%, 81%, 100%;
+}
+
+@media (max-width: 1160px) {
+  #become-member-box {
+    background-position-x: 0%, 100%;
+
+  }
+
+
+}
+#become-member-text {
+  font-size: 2.5rem;
+}
+
+#become-member-text:hover {
+  cursor: pointer;
+  border-bottom: .5rem solid gold;
+}
+
+#membership-area {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+}
+
+#membership-form {
+  height: 75%;
+  width: 50%;
+  background-color: white;
+  position: relative;
+  padding: 3rem;
+}
+
+
+
+/*--------------Buttons Section--------------*/
+
+.teahouse-close-button {
+  padding: .45rem;
+  background-color: firebrick;
+  color: white;
+  border-radius: .5rem;
+}
+
+#member-close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1.5rem;
+}
+
+#shopping-cart-close-button {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+#shop-reset-button {
+  position: absolute;
+  bottom: 2rem;
+  left: 45%;
+}
+
+#shop-reset-button:hover {
+  cursor: pointer;
+}
+
+/*--------------End of Button List--------------*/
+
+/*--------------Start of Register Form--------------*/
+#become-member-title {
+  font-size: 4rem;
+  text-align: center;
+  border-bottom: solid;
+  margin-bottom: 1rem;
+}
+
+.member-labels {
+  font-size: 2.0rem;
+
+}
+
+.member-input {
+  font-size: 1.2rem;
+}
+
+#submit-button {
+
+  display: block;
+  margin: 0 auto;
+  margin-top: 1rem;
+}
+
+#member-registration-area {
+
+  display: inline-block;
+  width: 50%;
+  height: 45%;
+  flex-wrap: wrap;
+
+}
+
+#premium-advertisement {
+  width: 50%;
+  display: inline-block;
+  padding-right: .5rem;
+  size: 1px;
+  border-left: solid black;
+}
+
+#form-element {
+  margin: 0;
+  padding: 0;
+}
+
+#content-box {
+  display: flex;
+  width: 100%;
+  height: 50%;
+}
+
+.member-registration-deals {
+  text-align: center;
+  font-size: 1.4rem;
+}
+
+#form-submit-button {
+  margin: 0 auto;
+  display: block;
+}
+
+#successful-form-sent {
+  color: green;
 }

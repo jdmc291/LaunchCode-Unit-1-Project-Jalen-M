@@ -3,14 +3,27 @@ import TeaHouseCloseButton from "./TeaHouseCloseButton";
 
 
 const PopupCard = (props) => {
-// <PopupCard picture={picture} region={region} description={description} 
-// brewingMethod={brewingMethod} flavorProfile={flavorProfile}
-// } popupSwitch={setPopup} popupStatus={popup}/>
-//                <PopupCard popupStatus={popup} changeStatus={setPopup}/> usersCurrentItems={usersCurrentItems} setUsersCurrentItems={setUsersCurrentItems}
 
-    const { popupStatus, changeStatus, numberOfItems, usersCurrentItems } = props;
-    
+
+    const { popupStatus, changeStatus, numberOfItems, setNumberOfItems, usersCurrentItems, setUsersCurrentItems } = props;
+
+    let userTotal = 0;
+
+    // When the user clicks on the reset button, the array of their current items will be reset to null
+
+    const handleReset = () => {
+
+        let resetArray = [];
+        let resetCount;
+
+        setUsersCurrentItems(resetArray);
+        setNumberOfItems(resetCount);
+    }
+
     const orderDetails = usersCurrentItems.map((singleLineItem) =>{
+
+        
+        userTotal += singleLineItem.quantity * singleLineItem.price;
         
         return(
             
@@ -21,7 +34,7 @@ const PopupCard = (props) => {
                 </td>
 
                 <td>
-                    {singleLineItem.price}
+                    ${singleLineItem.price}
                 </td>
 
                 <td>
@@ -29,7 +42,7 @@ const PopupCard = (props) => {
                 </td>
 
                 <td>
-                    {singleLineItem.quantity * singleLineItem.price}
+                    ${singleLineItem.quantity * singleLineItem.price}
                 </td>
 
             </tr>
@@ -45,7 +58,7 @@ const PopupCard = (props) => {
 
                     <div className="popup-card">
 
-                        <TeaHouseCloseButton setSwitch={changeStatus} />
+                        <TeaHouseCloseButton id="shopping-cart-close-button" setSwitch={changeStatus} />
                         
                             <p className="popup-content">
                                 Total Item(s) Selected: {numberOfItems}    
@@ -71,6 +84,9 @@ const PopupCard = (props) => {
                                 
                                 </tbody>
                             </table>
+                            <br></br>
+<p style={{fontWeight: "bold", fontSize: "2rem"}}> Total: ${userTotal}</p>
+                        <button id="shop-reset-button"className="teahouse-close-button" onClick={() => handleReset()}>RESET</button>  
                     </div>
 
                 </div>

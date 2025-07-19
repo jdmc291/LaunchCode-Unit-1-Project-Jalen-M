@@ -1,18 +1,19 @@
-import { useState } from "react";
-import PopupCard from "./PopupCard";
 
 const ProductCard = (props) => {
-    // <ProductCard id={item.id} name={item.name} price={item.price} description = {item.description} picture = {item.image_url} region={item.region} steepLevel={item.steep_level} weight={item.weight} brewingMethod={item.brewing_method} flavorProfile={item.flavor_profile}
-    const { id, name, price, description, picture, setCounter, counter, usersCurrentItems, setUsersCurrentItems } = props;
+    const { uniqueId, name, price, description, picture, setCounter, usersCurrentItems, setUsersCurrentItems } = props;
 
     const ToggleCartAddition = () => {
+
+        //This first checks if the item is already in the cart, if it is, it only adds the quantity up 1
+        // if it does not exist, it creates a new list with the new item in the array and replaces what is...
+        //... currently in the useState
+
+
+
         let productExists = false;
         let totalItems = 0;
         let lineNumber;
         let myArray = [];
-        
-
-
 
         for (let lineItem = 0; lineItem < usersCurrentItems.length; lineItem++) {
 
@@ -30,9 +31,11 @@ const ProductCard = (props) => {
 
         else {
 
+            //itemNum is for mapping for the popupCard's table element
+
             myArray = [...usersCurrentItems,
             {
-                itemNum: id,
+                itemNum: uniqueId, 
                 name: name,
                 quantity: 1,
                 price: price
@@ -45,19 +48,21 @@ const ProductCard = (props) => {
 
         for (let teaProduct of myArray)
         {
+            //There will be times where the quantity will be null. 
+            // This will be displayed on the ShoppingPage next to the cart Icon
+
             totalItems += teaProduct?.quantity
         }
 
-        console.log(totalItems);
         setCounter(totalItems);
 
     }
-
+// id={item.id}
     return (
 
-        <div className="product-card" onClick={() => ToggleCartAddition()}>
-            <div className="product-card-picture-area">
-                <img className="source-picture" src={picture} />
+        <div className=" product-card" onClick={() => ToggleCartAddition()}>
+            <div  className="product-card-picture-area">
+                <img className="source-picture" src={picture} alt={name} />
             </div>
 
             <div className="product-card-description">
@@ -65,9 +70,7 @@ const ProductCard = (props) => {
 
                 <p className="more-tea-info">{description}</p>
             </div>
-            <div>
-                {usersCurrentItems[0]?.mame}
-            </div>
+
         </div>
 
 

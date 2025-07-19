@@ -11,9 +11,8 @@ function App() {
   return (
     <>
       
-
       <BrowserRouter>
-          <Header />
+          <Header title={"The Tea House"}/>
         <Routes>
           
           <Route path="/" element={<HomePage />}></Route>
@@ -26,7 +25,6 @@ function App() {
 
     </>
   )
-
 }
 
 export default App

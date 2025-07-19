@@ -2,6 +2,9 @@ const LocationsPage = () =>{
 
     return(
         <>
+        <section id="locations-section">
+
+        </section>
         </>
     )
 }
