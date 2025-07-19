@@ -14,7 +14,7 @@ const MembershipForm = (props) => {
     //Form Submitted Successfully. Check your email's inbox &#9989;
 
     const handleSubmission = (e) => {
-
+        
         //Prevents the form from going away on submit
         e.preventDefault();
         let submittedFirstNameLength = firstName.length;
@@ -23,16 +23,16 @@ const MembershipForm = (props) => {
 
         // This will check if their inputs meet what is required
 
-        if (submittedFirstNameLength < 2 || submittedLastNameLength < 2) {
-            setSubmitMessage("Error on Form. Please Make First and Last Name Longer");
-        }
 
-        if (!submittedEmail.includes("@gmail.com") && !submittedEmail.includes("@icloud.com") && !submittedEmail.includes("@yahoo.com") ) {
+        if (firstName.length < 3 || lastname.length < 3) {
+            console.log("hoory");
+            setSubmitMessage("Error on Form. Please Make First and Last Name Longer");
+        } else if (!submittedEmail.includes("@gmail.com") && !submittedEmail.includes("@icloud.com") && !submittedEmail.includes("@yahoo.com")) {
 
             setSubmitMessage("Error on Form. Please enter iCloud, GMail, or Yahoo email");
-        }
 
-        else {
+        } else {
+
             setSubmitMessage(`Form Submitted Successfully. Check your email's inbox`)
         }
     }
@@ -40,7 +40,10 @@ const MembershipForm = (props) => {
     //tracking what the user puts in the values
 
     const handleFirstNameChange = (e) => {
-        setFirstName(e.target.value.toLowerCase());
+        let currentFirstName = e.target.value.toLowerCase();
+        
+        setFirstName(currentFirstName);
+
     }
 
     const handleLastNameChange = (e) => {
@@ -92,7 +95,6 @@ const MembershipForm = (props) => {
                                             <br></br>
 
                                             {submitMessage}
-                                            
 
                                         </form>
 
