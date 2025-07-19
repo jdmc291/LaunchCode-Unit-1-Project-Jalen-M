@@ -18,15 +18,13 @@ const MembershipForm = (props) => {
         //Prevents the form from going away on submit
         e.preventDefault();
 
-        let submittedEmail = email;
-
         // This will check if their inputs meet what is required
 
 
         if (firstName.length < 3 || lastname.length < 3) {
 
             setSubmitMessage("Error on Form. Please Make First and Last Name Longer");
-        } else if (!submittedEmail.includes("@gmail.com") && !submittedEmail.includes("@icloud.com") && !submittedEmail.includes("@yahoo.com")) {
+        } else if (!email.includes("@gmail.com") && !email.includes("@icloud.com") && !email.includes("@yahoo.com")) {
 
             setSubmitMessage("Error on Form. Please enter iCloud, GMail, or Yahoo email");
 
