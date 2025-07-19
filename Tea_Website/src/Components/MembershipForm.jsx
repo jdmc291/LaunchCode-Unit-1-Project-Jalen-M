@@ -17,8 +17,7 @@ const MembershipForm = (props) => {
         
         //Prevents the form from going away on submit
         e.preventDefault();
-        let submittedFirstNameLength = firstName.length;
-        let submittedLastNameLength = lastname.length;
+
         let submittedEmail = email;
 
         // This will check if their inputs meet what is required
