@@ -24,7 +24,7 @@ const MembershipForm = (props) => {
 
 
         if (firstName.length < 3 || lastname.length < 3) {
-            console.log("hoory");
+
             setSubmitMessage("Error on Form. Please Make First and Last Name Longer");
         } else if (!submittedEmail.includes("@gmail.com") && !submittedEmail.includes("@icloud.com") && !submittedEmail.includes("@yahoo.com")) {
 
