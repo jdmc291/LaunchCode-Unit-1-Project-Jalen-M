@@ -18,7 +18,7 @@ const ShoppingPage = () => {
     let footerData = HeaderData.map((singleLink) => {
 
         return(
-            <li key={singleLink.Id}className="footer-items">
+            <li key={singleLink.Id}className="link-items">
                 <Link to={`${singleLink.Link}`}>
                     {singleLink.Title}
                 </Link>
@@ -49,13 +49,13 @@ const ShoppingPage = () => {
                 </div>
 
                 
-                <footer id="footer-section">
+                <div id="links-section">
                     <p>Can't Find What You're Looking For?</p>
-                    <ul id="footer-links-section">
+                    <ul id="different-links-section">
                         {footerData}
                     </ul>
 
-                </footer>
+                </div>
 
                 <PopupCard popupStatus={popup} changeStatus={setPopup} numberOfItems={count} setNumberOfItems={setCount} usersCurrentItems={usersCurrentItems} setUsersCurrentItems={setUsersCurrentItems}/>
 

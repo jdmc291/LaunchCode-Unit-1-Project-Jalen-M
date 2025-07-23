@@ -5,6 +5,8 @@ import HomePage from './Pages/HomePage';
 import ShoppingPage from './Pages/ShoppingPage';
 import LocationsPage from './Pages/LocationsPage';
 import AboutUsPage from './Pages/AboutUsPage';
+import Footer from './Components/Footer';
+
 
 function App() {
 
@@ -21,6 +23,9 @@ function App() {
           <Route path="/aboutUs" element={<AboutUsPage />}></Route>
 
         </Routes>
+
+        <Footer />
+
       </BrowserRouter>
 
     </>

@@ -101,7 +101,7 @@ nav a:hover {
 }
 
 #home-section {
-  height: auto;
+  height: calc(100vh - 9.05rem);
   width: 100%;
   background: RGB(222, 184, 135);
   display: flex;
@@ -158,7 +158,7 @@ nav a:hover {
 #shopping-section {
   display: grid;
   width: 100%;
-  height: calc(100vh - 7rem);
+  height: calc(100vh - 9.05rem);
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
 
@@ -318,29 +318,28 @@ nav a:hover {
 
 
 
-/*--------------Footer Section--------------*/
-#footer-section {
+/*--------------More Links Section--------------*/
+#links-section {
   grid-column: 6 / 7;
   grid-row: 2 / 7;
 
 }
 
-footer {
-  border-top: 1px solid black
-}
 
-footer p {
+
+#links-section p {
+  border-top: solid 1px black;
   padding-top: 1rem;
   text-align: center;
 }
 
-.footer-items {
+.link-items {
   list-style: none;
   padding: .62rem;
   flex-wrap: wrap;
 }
 
-#footer-links-section {
+#different-links-section {
 
   display: flex;
   flex-wrap: wrap;
@@ -351,7 +350,7 @@ footer p {
 
 /*--------------About Us Section--------------*/
 #about-us-section {
-  height: calc(100vh - 7rem);
+  height: calc(100vh - 9.05rem);
   width: 100%;
   background-image: url("./assets/GreenTeaWallpaper.jpg");
   background-size: 100% 100%;
@@ -411,6 +410,7 @@ footer p {
   background-repeat: no-repeat;
   background-size: contain;
   background-position-x: 0%, 18%, 81%, 100%;
+  z-index: 999;
 }
 
 @media (max-width: 1160px) {
@@ -497,7 +497,7 @@ footer p {
 }
 
 .member-input {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 #submit-button {
@@ -554,13 +554,13 @@ footer p {
 /*--------------Start of Locations Page--------------*/
 
 #locations-section{
-  height: calc(100vh - 7rem);
+  height: calc(100vh - 9.05rem);
   width: 100%;
 
 }
 
 .not-available{
-  height: 100%;
+  height: 95%;
   width: 100%;
   display: flex;
   justify-content: center;
@@ -569,3 +569,19 @@ footer p {
 }
 
 /*--------------End of Locations Page--------------*/
+
+#tea-house-footer{
+  z-index: -1;
+  width: 100%;
+  height: 1rem;
+  position: relative;
+  background-color: rgb(85, 107, 47) ;
+  color: #f0f0f0;
+  text-align: center;
+  padding-top: .5rem;
+  padding-bottom: .5rem;
+}
+
+footer {
+  border-top: 1px solid black
+}
